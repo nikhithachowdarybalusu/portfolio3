@@ -38,7 +38,7 @@
   @media (max-width: 768px) {
 
     .menu-btn {
-      display: none;
+      display: flex;
     }
   
     ul {
@@ -48,8 +48,9 @@
       top: 60px;
       right: 0;
       background: #222;
-      width: 100%;
-      padding: 10px;
+      width: 30%;
+      /* padding-left: 20px; */
+      align-items: center;
     }
   
     ul.open {
