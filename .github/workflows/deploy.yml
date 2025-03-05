@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+    permissions:
+      contents: write  # Explicitly grant write access to contents of the repository (necessary for pushing to the repository)
 
     steps:
     - name: Checkout code
