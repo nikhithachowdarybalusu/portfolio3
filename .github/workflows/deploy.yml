@@ -24,7 +24,8 @@ jobs:
 
     - name: Build Angular project
       run: |
-        ng build --configuration production --base-href="https://nikhithachowdarybalusu.github.io/portfolio3/"
+        # Ensure ng is available
+        ./node_modules/.bin/ng build --configuration production --base-href="https://nikhithachowdarybalusu.github.io/portfolio3/"
 
     - name: Install angular-cli-ghpages
       run: |
