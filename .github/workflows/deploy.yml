@@ -24,7 +24,6 @@ jobs:
 
     - name: Build Angular project
       run: |
-        # Ensure ng is available
         ./node_modules/.bin/ng build --configuration production --base-href="https://nikhithachowdarybalusu.github.io/portfolio3/"
 
     - name: Install angular-cli-ghpages
@@ -33,6 +32,4 @@ jobs:
 
     - name: Deploy to GitHub Pages
       run: |
-        ngh --dir=dist/portfolio3  # Deploy to GitHub Pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for authentication
+        ngh --dir=dist/portfolio3 --no-silent --message "Deploying new build" --token ${{ secrets.GITHUB_TOKEN }}
