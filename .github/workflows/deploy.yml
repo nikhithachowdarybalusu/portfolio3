@@ -32,4 +32,6 @@ jobs:
 
     - name: Deploy to GitHub Pages
       run: |
-        ngh --dir=dist/portfolio3 --no-silent --message "Deploying new build" --token ${{ secrets.GITHUB_TOKEN }}
+        ngh --dir=dist/portfolio3 --no-silent --message "Deploying new build"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token automatically used for authentication
