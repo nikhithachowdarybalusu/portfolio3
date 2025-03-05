@@ -1,3 +1,17 @@
+<nav class="navbar">
+  <div class="logo">My Portfolio</div>
+  <button class="menu-btn" (click)="toggleMenu()">☰</button>
+  <ul [class.open]="isMenuOpen">
+    <li><a (click)="scrollToSection('home')">Home</a></li>
+    <li><a (click)="scrollToSection('about')">About</a></li>
+    <li><a (click)="scrollToSection('projects')">Projects</a></li>
+    <li><a (click)="scrollToSection('resume')">Resume</a></li>
+    <li><a (click)="scrollToSection('contact')">Contact</a></li>
+  </ul>
+</nav>
+
+
+
 <h1>My name is: Chandra Nikitha Balusu</h1>
 <h2>Occupation: Student</h2>
 <h2>Location: Kansas, USA</h2>
