@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../services/service.service';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   profile: any = {};
+  weatherInfo = [];
 
-  constructor() {}
+  constructor(private service: ServiceService) {}
 
   ngOnInit() {
     // this.profileService.getProfile().subscribe((data) => {
     //   this.profile = data;
     //   console.log("Profile:\n",this.profile);
     // });
+
+    this.service.getWeather().subscribe((data) => {
+      console.log("Before call in home component");
+      this.weatherInfo = data;
+    })
   }
 
   // Method to call the API and download the file
