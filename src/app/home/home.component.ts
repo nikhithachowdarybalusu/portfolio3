@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../services/service.service';
+import { saveAs } from 'file-saver';
+
 
 @Component({
   selector: 'app-home',
@@ -25,19 +27,21 @@ export class HomeComponent implements OnInit {
   }
 
   // Method to call the API and download the file
-    downloadResume() {
-      // this.profileService.downloadResume().subscribe(
-      //   (blob: Blob) => {
-      //     // Use FileSaver.js to download the file
-      //     const filename = 'Balusu_resume.pdf'; // Provide default filename
-      //     saveAs(blob, filename); // Trigger file download
-      //   },
-      //   (error) => {
-      //     console.error('Error downloading file:', error);
-      //     alert('There was an error downloading the file.');
-      //   }
-      // );
-    }
+  downloadResume() {
+    this.service.downloadResume().subscribe({
+      next: (blob: Blob) => {
+        console.log(blob);
+        // Use FileSaver.js to download the file
+        const filename = 'Chandra_Nikitha_Balusu.pdf'; // Provide default filename
+        saveAs(blob, filename); // Trigger file download
+      },
+      error: (error) => {
+        console.error('Error downloading file:', error);
+        alert('There was an error downloading the file.');
+      }
+    });
+  }
+  
 
     viewResume() {
       // this.profileService.viewResume().subscribe(response => {

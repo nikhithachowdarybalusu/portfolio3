@@ -17,4 +17,9 @@ export class ServiceService {
     return this.http.get<any>(this.apiUrl+"/WeatherForecast");
   }
 
+  downloadResume(): Observable<Blob> {
+    console.log("Download API called");
+    return this.http.get(this.apiUrl+"/resume/download", { responseType: 'blob' });
+  }
+
 }
