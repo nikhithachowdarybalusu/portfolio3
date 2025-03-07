@@ -15,15 +15,10 @@ export class HomeComponent implements OnInit {
   constructor(private service: ServiceService) {}
 
   ngOnInit() {
-    // this.profileService.getProfile().subscribe((data) => {
-    //   this.profile = data;
-    //   console.log("Profile:\n",this.profile);
-    // });
-
-    this.service.getWeather().subscribe((data) => {
-      console.log("Before call in home component");
-      this.weatherInfo = data;
-    })
+    this.service.getProfile().subscribe((data) => {
+      this.profile = data;
+      console.log("Profile:\n",this.profile);
+    });
   }
 
   // Method to call the API and download the file
@@ -44,10 +39,10 @@ export class HomeComponent implements OnInit {
   
 
     viewResume() {
-      // this.profileService.viewResume().subscribe(response => {
-      //   const blob = new Blob([response], { type: 'application/pdf' });
-      //   const url = window.URL.createObjectURL(blob);
-      //   window.open(url);  // Open in new tab
-      // });
-    }
+      this.service.viewResume().subscribe(response => {
+        const blob = new Blob([response], { type: 'application/pdf' });
+        const url = window.URL.createObjectURL(blob);
+        window.open(url);  // Open in new tab
+      });
+    }  
 }
