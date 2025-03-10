@@ -9,15 +9,16 @@
   }
   
   .hero {
-    display: flex;
+    // display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1000px;
+    // max-width: 1000px;
     width: 100%;
+    background-image: url(../../assets/background_image.png);
   }
   
   .hero-text {
-    max-width: 500px;
+    // max-width: 500px;
   }
   
   h1 {
@@ -35,10 +36,14 @@
     margin-bottom: 20px;
   }
   
-  .hero-image img {
+  .hero-image{
+    width: 100%;
+    align-items: center;
+    img {
     width: 200px;
     border-radius: 50%;
     border: 4px solid white;
+    }
   }
   
   .btn {
@@ -55,5 +60,11 @@
   .btn:hover {
     background: #ff6f5f;
     cursor: pointer;
+  }
+
+  .summary{
+    // padding-left: 5%;
+    // padding-right: 10%;
+    width: 50%;
   }
   

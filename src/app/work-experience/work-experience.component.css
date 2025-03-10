@@ -1,0 +1,139 @@
+/* Basic Section Styling */
+.work-experience-section {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Flex container for cards */
+.experience-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Added gap for better spacing */
+  margin: 0 auto;
+}
+
+/* Experience Card Styling */
+.experience-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  cursor: pointer;
+  /* opacity: 0; */
+  transform: translateY(50px);
+  margin-bottom: 20px; /* Ensures spacing between rows */
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #174f88;
+  margin-bottom: 10px;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.card-duration {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+.view-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #174f88;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.view-link:hover {
+  color: #174f88;
+}
+
+.view-link::after {
+  content: '→';
+  position: absolute;
+  right: -25px;
+  transition: transform 0.3s ease;
+}
+
+.view-link:hover::after {
+  transform: translateX(5px);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .experience-cards {
+    flex-direction: column; /* Stacks the cards vertically */
+    gap: 15px;
+  }
+
+  .experience-card {
+    width: 90%; /* Make the card width larger on mobile */
+    max-width: 400px;
+    margin: 0 auto; /* Center the cards */
+    padding: 15px;
+  }
+
+  .card-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-duration {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem; /* Slightly smaller font size for descriptions */
+  }
+
+  .view-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet and Small Laptop Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .experience-cards {
+    gap: 25px;
+  }
+
+  .experience-card {
+    width: 45%; /* Two cards per row */
+  }
+}

@@ -1,0 +1,166 @@
+/* Container for the tabs */
+.tabs-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  animation: fadeIn 0.5s ease-out;
+  align-items: center;
+}
+
+/* Flex container for the tabs */
+.tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Individual tab styling */
+.tab {
+  min-width: 250px;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.tab:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px #00000026;
+  background-color: #174f88;
+  box-shadow: #a4a4a5;
+  color: #fff;
+  .project-link{
+    color: #fff;
+  }
+  .view-btn{
+    background-color: #fff;
+    color: #174f88;
+  }
+}
+
+.tab-header{
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-content {
+  flex-grow: 1;
+}
+
+/* Animation for tabs */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animating each tab to appear in a staggered manner */
+@keyframes fadeInStagger {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add delay for each tab to animate staggered */
+.tab:nth-child(1) {
+  animation: fadeInStagger 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+.tab:nth-child(2) {
+  animation: fadeInStagger 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.tab:nth-child(3) {
+  animation: fadeInStagger 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+}
+.tab:nth-child(4) {
+  animation: fadeInStagger 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+}
+.tab:nth-child(5) {
+  animation: fadeInStagger 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Link inside the tab (project link) */
+.project-link {
+  text-align: right;
+  font-size: 14px;
+  color: #174f88;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Button to view project details */
+.view-btn {
+  align-self: flex-end;
+  padding: 12px 20px;
+  background-color: #174f88;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #174f88;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .view-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+/* Tablet to small laptop responsiveness (up to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .tab {
+    min-width: 45%;
+    max-width: 45%;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="tabs-container">
+    <div class="tabs">
+      <div class="tab" *ngFor="let project of projects">
+        
+      <div class="tab-header">
+        <!-- <img [src]="project.imageUrl" alt="Project Image" class="project-img" /> -->
+      </div>
+        <div class="tab-content">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description | slice:0:100 }}...</p>
+          <a [routerLink]="['/project', project.id]" class="project-link">Read more</a>
+          <!-- <button (click)="openProjectInNewTab(project.id)" class="project-link">Read more</button> -->
+        </div>
+        <button class="view-btn" (click)="viewProject(project)">View Project</button>
+      </div>
+    </div>
+  </div>
+  

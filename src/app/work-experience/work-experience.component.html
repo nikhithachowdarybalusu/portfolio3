@@ -1,0 +1,23 @@
+<div class="work-experience-section">
+    <h2 class="section-title">Work Experience</h2>
+  
+    <div class="experience-cards">
+      <div 
+        class="experience-card"
+        *ngFor="let experience of workExperience; let i = index"
+        [@fadeInUp]="i"
+        [ngStyle]="{ 'animation-delay': experience.delay }"
+      >
+        <div class="card-header">
+          <h3>{{ experience.position }}</h3>
+          <span class="company-name">{{ experience.company }}</span>
+        </div>
+  
+        <p class="card-duration">{{ experience.duration }}</p>
+        <p class="card-description">{{ experience.description }}</p>
+  
+        <a href="{{ experience.link }}" target="_blank" class="view-link">View More</a>
+      </div>
+    </div>
+  </div>
+  

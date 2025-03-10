@@ -1,0 +1,38 @@
+.project-detail {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-detail img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .project-detail h2 {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  
+  .project-detail p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .project-link {
+    color: #174f88;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .project-link:hover {
+    text-decoration: underline;
+  }
+  

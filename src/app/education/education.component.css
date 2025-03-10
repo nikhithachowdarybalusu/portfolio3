@@ -1,0 +1,192 @@
+/* Accordion Container */
+mat-accordion {
+  margin: 30px auto;
+  max-width: 80%;
+  padding: 20px;
+  background-color: #f5f5f5; /* Light gray background */
+  border-radius: 8px;
+  /* Ensure the container doesn't overflow */
+  overflow: hidden;
+}
+
+/* Panel Styling */
+mat-expansion-panel {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Header Styling */
+.mat-expansion-panel-header {
+  background-color: #6200ea; /* Deep purple gradient */
+  background: linear-gradient(135deg, #174f88, #3178c0);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+/* Section Indicator - Small dot on left */
+.mat-expansion-panel-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff; /* White dot */
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Header */
+.mat-expansion-panel-header:hover {
+  background-color: #3700b3; /* Darker purple */
+  cursor: pointer;
+}
+
+/* When the panel is expanded, change the indicator color */
+.mat-expanded .mat-expansion-panel-header::before {
+  background-color: #ff4081; /* Pink when expanded */
+}
+
+/* Panel Content */
+.panel-content {
+  font-size: 1rem;
+  color: #174f88;
+  padding: 20px;
+  background-color: #f1f1f1; /* Light gray background for content */
+  border-radius: 4px;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* When the panel is expanded, slide in the content */
+.mat-expanded .panel-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Expand/Collapse Icon */
+.mat-expansion-panel-header .mat-expansion-indicator {
+  color: white; /* White indicator icon */
+}
+
+/* Box Shadow on Hover */
+mat-expansion-panel:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Expanded Panel Style */
+.mat-expanded .mat-expansion-panel-header {
+  background-color: #174f88; /* Blue when expanded */
+}
+
+/* Fade-in animation for the panels */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for each panel */
+mat-expansion-panel {
+  animation: fadeIn 0.9s ease-out;
+}
+
+mat-expansion-panel:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+mat-expansion-panel:nth-child(odd) {
+  animation-delay: 0.6s;
+}
+
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+
+/* Mobile Devices (Portrait and Landscape) */
+@media (max-width: 600px) {
+  mat-accordion {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .mat-expansion-panel-header {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .panel-content {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
+  .mat-expansion-panel-header::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  mat-expansion-panel {
+    margin-bottom: 15px;
+  }
+}
+
+/* Small to Medium Tablets (Portrait) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  mat-accordion {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  .mat-expansion-panel-header {
+    font-size: 1.2rem;
+    padding: 14px;
+  }
+
+  .panel-content {
+    font-size: 1rem;
+    padding: 18px;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  mat-accordion {
+    /* max-width: 900px; */
+    margin: 30px auto;
+  }
+
+  .mat-expansion-panel-header {
+    font-size: 1.3rem;
+    padding: 15px;
+  }
+
+  .panel-content {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+}
+mat-accordion{
+  max-width: 80%;
+}
+
+@media (hover: none) {
+  .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover{
+    background-color: #174f88;
+  }
+}

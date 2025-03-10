@@ -1,0 +1,11 @@
+<div class="project-detail" *ngIf="project.id">
+    <img [src]="project.image" alt="{{project.title}}" class="project-image">
+    <h2>{{ project.title }}</h2>
+    <p><strong>Period:</strong> {{ project.period }}</p>
+    <div class="project-description">
+      <p *ngFor="let description of project.description">{{ description }}</p>
+    </div>
+    <a [href]="project.link" target="_blank" class="project-link">View Live Project</a>
+    <a [href]="project.github" target="_blank" class="project-link">GitHub Repository</a>
+  </div>
+  
