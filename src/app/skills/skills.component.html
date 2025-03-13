@@ -1,0 +1,19 @@
+<div class="skills-section">
+    <div class="skills-header">
+        <h2 class="section-title">
+        <i class="fas fa-cogs skills-icon"></i> 
+        Skills
+        </h2>
+        <div class="title-line"></div> <!-- Line next to the title -->
+    </div>
+    
+    <div class="skills-list">
+      <div class="skill-category" *ngFor="let skillCategory of skillsList">
+        <h3><i [class]="skillCategory.icon"></i> {{ skillCategory.category }}</h3>
+        <ul>
+          <li *ngFor="let skill of skillCategory.skills">{{ skill }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

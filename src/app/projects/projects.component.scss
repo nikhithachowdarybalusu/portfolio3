@@ -16,15 +16,20 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-left: 2%;
   margin-right: 2%; /* Space between title and line */
+}
+
+.projects-icon {
+  font-size: 2rem;  /* Adjust the size of the icon */
+  margin-right: 10px;  /* Space between the icon and title */
+  margin-top: 2%;
+  margin-left: 4%;
 }
 
 .title-line {
   flex-grow: 1; /* This will make the line extend across */
   height: 2px; /* Line thickness */
   background-color: $black; /* Line color */
-  margin-left: 4%;
 }
 
 /* Container for the tabs */

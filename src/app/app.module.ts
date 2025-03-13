@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion'
 import { ProjectsComponent } from './projects/projects.component';
 import { EducationComponent } from './education/education.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EducationComponent } from './education/education.component';
     ProjectsComponent,
     WorkExperienceComponent,
     ProjectDescriptionComponent,
-    EducationComponent
+    EducationComponent,
+    SkillsComponent
   ],
   imports: [
     CommonModule,
