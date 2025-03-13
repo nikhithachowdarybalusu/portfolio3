@@ -4,7 +4,7 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
 @Component({
   selector: 'app-work-experience',
   templateUrl: './work-experience.component.html',
-  styleUrls: ['./work-experience.component.css'],
+  styleUrls: ['./work-experience.component.scss'],
   animations: [
     trigger('fadeInUp', [
       transition('* => *', [

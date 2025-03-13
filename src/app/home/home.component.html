@@ -1,22 +1,32 @@
 <section id="home" class="section">
   <div class="hero">
-    <div class="hero-image">
-      <img src="assets/N_letter_logo.png" alt="Profile Image" class="profile-img">
+    <!-- Left side: Profile image, social icons, and View Resume button -->
+    <div class="hero-left">
+      <div class="hero-image">
+        <img src="assets/N_letter_logo.png" alt="Profile Image" class="profile-img">
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/nikithabalusu/" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/nikithabalusu" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- View Resume button -->
+      <a class="view-resume-btn" (click)="viewResume()">View Resume</a>
     </div>
-    <div class="hero-text">
+
+    <!-- Right side: Name, title, and introduction -->
+    <div class="hero-right">
       <h1>Hi, I'm Chandra Nikitha Balusu</h1>
-      <p>Full-stack developer</p>
-      <p>Experienced in Angular, skilled in .NET and SQL</p>
-      <a href="https://www.linkedin.com/in/nikithabalusu/" target="_blank" class="btn btn-primary">LinkedIn</a>
-      <a class="btn btn-secondary" (click)="viewResume()">Resume</a>
+      <p class="title">Full-stack Developer</p>
+      <p class="intro">Experienced in Angular, skilled in .NET and SQL</p>
+      <p class="summary">
+        I’m a software developer with a strong foundation in front-end development, web API creation, and problem-solving. 
+        Currently pursuing an MS in Computer Science, I have hands-on experience building impactful solutions using technologies like Angular, .NET, Python, and SQL. 
+        <br><br>With a background as an Angular Developer and a Graduate Teaching Assistant, I’m passionate about innovation, collaboration, and delivering high-quality software that makes a difference.
+      </p>
     </div>
-    
-  </div>
-  <div>
-    <p class="summary">
-      I’m a software developer with a strong foundation in front-end development, web API creation, and problem-solving. 
-      Currently pursuing an MS in Computer Science, I have hands-on experience building impactful solutions using technologies like Angular, .NET, Python, and SQL. 
-      <br><br>With a background as an Angular Developer and a Graduate Teaching Assistant, I’m passionate about innovation, collaboration, and delivering high-quality software that makes a difference.
-    </p>
   </div>
 </section>

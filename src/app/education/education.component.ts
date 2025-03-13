@@ -4,7 +4,7 @@ import { trigger, transition, style, animate, query } from '@angular/animations'
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.css'],
+  styleUrls: ['./education.component.scss'],
   animations: [
     trigger('fadeIn', [
       transition(':enter', [

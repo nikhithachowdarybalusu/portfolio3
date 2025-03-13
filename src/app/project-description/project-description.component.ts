@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-project-description',
   templateUrl: './project-description.component.html',
-  styleUrls: ['./project-description.component.css']
+  styleUrls: ['./project-description.component.scss']
 })
 export class ProjectDescriptionComponent {
   project: any;

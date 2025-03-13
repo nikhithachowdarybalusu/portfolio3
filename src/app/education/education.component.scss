@@ -1,3 +1,5 @@
+@import '../../assets/colors.scss';
+
 /* Accordion Container */
 mat-accordion {
   margin: 30px auto;
@@ -21,8 +23,8 @@ mat-expansion-panel {
 
 /* Header Styling */
 .mat-expansion-panel-header {
-  background-color: #6200ea; /* Deep purple gradient */
-  background: linear-gradient(135deg, #174f88, #3178c0);
+  // background-color: #6200ea; /* Deep purple gradient */
+  background: linear-gradient(135deg, $primary-color, $info-color);
   color: white;
   font-size: 1.3rem;
   font-weight: bold;
@@ -48,8 +50,9 @@ mat-expansion-panel {
 
 /* Hover Effect for Header */
 .mat-expansion-panel-header:hover {
-  background-color: #3700b3; /* Darker purple */
+  background-color: $primary-color !important; /* Darker purple */
   cursor: pointer;
+  box-shadow: 20px 20px 20px 20px $dark-color !important;
 }
 
 /* When the panel is expanded, change the indicator color */
@@ -60,7 +63,7 @@ mat-expansion-panel {
 /* Panel Content */
 .panel-content {
   font-size: 1rem;
-  color: #174f88;
+  color: $primary-color;
   padding: 20px;
   background-color: #f1f1f1; /* Light gray background for content */
   border-radius: 4px;
@@ -81,14 +84,9 @@ mat-expansion-panel {
   color: white; /* White indicator icon */
 }
 
-/* Box Shadow on Hover */
-mat-expansion-panel:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
 /* Expanded Panel Style */
 .mat-expanded .mat-expansion-panel-header {
-  background-color: #174f88; /* Blue when expanded */
+  background-color: $primary-color; /* Blue when expanded */
 }
 
 /* Fade-in animation for the panels */
@@ -186,7 +184,8 @@ mat-accordion{
 }
 
 @media (hover: none) {
-  .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover{
-    background-color: #174f88;
+  .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
+    background-color: $primary-color !important;
+    box-shadow: $secondary-color !important;
   }
 }

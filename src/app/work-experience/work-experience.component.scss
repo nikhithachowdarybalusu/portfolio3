@@ -1,15 +1,31 @@
+@import '../../assets/colors.scss';
+
 /* Basic Section Styling */
 .work-experience-section {
-  padding: 60px 20px;
-  background-color: #f7f7f7;
+  padding-bottom: 10%;
   text-align: center;
+}
+
+.work-experience-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* Space below the title */
+  justify-content: center; /* Centers the title and line on small screens */
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 40px;
-  color: #333;
+  // color: $primary-color;
+  margin-left: 4%;
+  margin-right: 2%; /* Space between title and line */
+}
+
+.title-line {
+  flex-grow: 1; /* This will make the line extend across */
+  height: 2px; /* Line thickness */
+  background-color: $black; /* Line color */
+  margin-right: 2%;
 }
 
 /* Flex container for cards */
@@ -31,7 +47,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
   cursor: pointer;
-  /* opacity: 0; */
   transform: translateY(50px);
   margin-bottom: 20px; /* Ensures spacing between rows */
 }
@@ -94,8 +109,22 @@
 
 /* Mobile Responsive Styles */
 @media (max-width: 767px) {
+  .work-experience-header {
+    flex-direction: column;
+    align-items: flex-start; /* Aligns the title and line vertically */
+    justify-content: flex-start;
+  }
+
   .section-title {
     font-size: 2rem;
+    margin-left: 4%;
+    margin-right: 2%; /* Space between title and line */
+    margin-bottom: 10px; /* Adds some space below the title */
+  }
+
+  .title-line {
+    width: 100%; /* Makes the line full-width on mobile */
+    margin-top: 10px; /* Adds space below the title */
   }
 
   .experience-cards {
@@ -104,9 +133,9 @@
   }
 
   .experience-card {
-    width: 90%; /* Make the card width larger on mobile */
+    width: 90%; /* Makes the card width larger on mobile */
     max-width: 400px;
-    margin: 0 auto; /* Center the cards */
+    margin: 0 auto; /* Centers the cards */
     padding: 15px;
   }
 
@@ -129,11 +158,24 @@
 
 /* Tablet and Small Laptop Styles */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .work-experience-header {
+    justify-content: flex-start; /* Aligns the title and line to the left */
+  }
+
   .experience-cards {
     gap: 25px;
   }
 
   .experience-card {
     width: 45%; /* Two cards per row */
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .title-line {
+    width: 100%; /* Full width line */
+    margin-top: 10px;
   }
 }

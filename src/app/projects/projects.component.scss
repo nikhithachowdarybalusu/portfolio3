@@ -1,3 +1,32 @@
+@import '../../assets/colors.scss';
+
+/* Basic Section Styling */
+.projects-section {
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+.projects-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* Space below the title */
+  justify-content: center; /* Centers the title and line on small screens */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-left: 2%;
+  margin-right: 2%; /* Space between title and line */
+}
+
+.title-line {
+  flex-grow: 1; /* This will make the line extend across */
+  height: 2px; /* Line thickness */
+  background-color: $black; /* Line color */
+  margin-left: 4%;
+}
+
 /* Container for the tabs */
 .tabs-container {
   width: 100%;
@@ -39,7 +68,6 @@
   transform: translateY(-5px);
   box-shadow: 0 8px 25px #00000026;
   background-color: #174f88;
-  box-shadow: #a4a4a5;
   color: #fff;
   .project-link{
     color: #fff;
@@ -50,7 +78,7 @@
   }
 }
 
-.tab-header{
+.tab-header {
   position: relative;
   overflow: hidden;
 }
@@ -136,31 +164,76 @@
 
 /* Mobile responsiveness */
 @media (max-width: 767px) {
-  .tabs {
+  .projects-header {
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start; /* Aligns the title and line vertically */
+    justify-content: flex-start;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-left: 4%;
+    margin-right: 2%; /* Space between title and line */
+    margin-bottom: 10px; /* Adds some space below the title */
+  }
+
+  .title-line {
+    width: 100%; /* Makes the line full-width on mobile */
+    margin-top: 10px; /* Adds space below the title */
+  }
+
+  .tabs {
+    flex-direction: column; /* Stacks the tabs vertically */
+    gap: 15px;
   }
 
   .tab {
-    min-width: 100%;
-    max-width: 100%;
+    width: 90%; /* Makes the tab width larger on mobile */
+    max-width: 400px;
+    margin: 0 auto; /* Centers the tabs */
+    padding: 15px;
+  }
+
+  .tab-header {
+    /* If you have project images, adjust them for mobile */
+    width: 100%;
+  }
+
+  .tab-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .tab-content p {
+    font-size: 1rem;
   }
 
   .view-btn {
-    width: 100%;
-    padding: 12px 0;
+    font-size: 0.9rem;
   }
 }
 
 /* Tablet to small laptop responsiveness (up to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .projects-header {
+    justify-content: flex-start; /* Aligns the title and line to the left */
+  }
+
   .tabs {
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .tab {
-    min-width: 45%;
+    min-width: 45%; /* Two tabs per row */
     max-width: 45%;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .title-line {
+    width: 100%; /* Full width line */
+    margin-top: 10px;
   }
 }

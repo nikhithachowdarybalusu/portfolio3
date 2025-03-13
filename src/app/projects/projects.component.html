@@ -1,18 +1,23 @@
-<div class="tabs-container">
+<div class="projects-section">
+  <div class="projects-header">
+    <div class="title-line"></div> <!-- Line next to the title -->
+    <h2 class="section-title">Projects</h2>
+  </div>
+
+  <div class="tabs-container">
     <div class="tabs">
       <div class="tab" *ngFor="let project of projects">
-        
-      <div class="tab-header">
-        <!-- <img [src]="project.imageUrl" alt="Project Image" class="project-img" /> -->
-      </div>
+        <div class="tab-header">
+          <!-- You can add an image or other content here if needed -->
+          <!-- <img [src]="project.imageUrl" alt="Project Image" class="project-img" /> -->
+        </div>
         <div class="tab-content">
           <h3>{{ project.title }}</h3>
           <p>{{ project.description | slice:0:100 }}...</p>
           <a [routerLink]="['/project', project.id]" class="project-link">Read more</a>
-          <!-- <button (click)="openProjectInNewTab(project.id)" class="project-link">Read more</button> -->
         </div>
         <button class="view-btn" (click)="viewProject(project)">View Project</button>
       </div>
     </div>
   </div>
-  
+</div>
