@@ -21,6 +21,12 @@
   margin-right: 2%; /* Space between title and line */
 }
 
+.laptop-icon {
+  font-size: 3rem; /* Increase icon size */
+  margin-right: 10px; /* Adds space between image and title */
+  color: $primary-color; /* Set color of the icon */
+}
+
 .title-line {
   flex-grow: 1; /* This will make the line extend across */
   height: 2px; /* Line thickness */
@@ -109,17 +115,18 @@
 
 /* Mobile Responsive Styles */
 @media (max-width: 767px) {
-  .work-experience-header {
-    flex-direction: column;
-    align-items: flex-start; /* Aligns the title and line vertically */
-    justify-content: flex-start;
-  }
 
   .section-title {
     font-size: 2rem;
     margin-left: 4%;
     margin-right: 2%; /* Space between title and line */
     margin-bottom: 10px; /* Adds some space below the title */
+    flex-wrap: nowrap;
+  }
+
+  .laptop-icon {
+    font-size: 2rem; /* Smaller icon size on mobile */
+    margin-right: 0; /* Removes margin for mobile */
   }
 
   .title-line {

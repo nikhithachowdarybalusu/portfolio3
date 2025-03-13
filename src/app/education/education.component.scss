@@ -3,19 +3,24 @@
 .education-section {
   padding: 4%;
   background-color: $light-color;
-  max-width: 60%;
   justify-content: center;
-  margin-left: 18%;
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: $primary-color;
+  color: $black;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.title-line {
+  flex-grow: 1; /* This will make the line extend across */
+  height: 2px; /* Line thickness */
+  background-color: $black; /* Line color */
+  margin-left: 2%;
 }
 
 .education-icon {
@@ -35,6 +40,8 @@
 
 .accordion-item {
   border-bottom: 1px solid #ddd;
+  margin-left: 18%;
+  max-width: 60%;
 }
 
 /* Override mat-expansion-panel styles */
@@ -45,16 +52,17 @@
 
 .mat-expansion-panel-header.mat-expanded{
   background-color: $primary-color !important;
+  color: $white;
 }
 
 ::ng-deep .mat-expansion-panel-header {
   width: 100%;
   padding: 15px;
-  background-color: $primary-color;
+  background-color: $white;
   text-align: left;
   font-size: 1.5rem;
   font-weight: 600;
-  color: $white;
+  color: $primary-color;
   cursor: pointer;
   border: none;
   border-radius: 6px;
@@ -62,18 +70,20 @@
 }
 
 ::ng-deep .mat-expansion-panel-header:hover {
-  background-color: darken($primary-color, 10%) !important;
+  // background-color: darken($primary-color, 10%) !important;
+  background-color: #bebaba !important;
 }
 
 ::ng-deep .mat-expansion-panel-body {
   padding: 15px;
   // background-color: $white; /* Background color for the expanded content */
   border-top: 1px solid $primary-color;
-  color: $primary-color;
+  color: $primary-color !important;
 }
 
 ::ng-deep .mat-expansion-panel-body p {
   margin: 0;
+  color: $primary-color !important;
 }
 
 ::ng-deep .mat-expansion-panel-header.mat-expansion-panel-header-focused {
@@ -89,6 +99,11 @@
     font-size: 2rem;
   }
 
+  .title-line {
+    width: 100%; /* Makes the line full-width on mobile */
+    margin-top: 10px; /* Adds space below the title */
+  }
+
   .accordion {
     padding: 10px;
   }
@@ -101,7 +116,7 @@
   .accordion-body {
     font-size: 1rem;
     padding: 12px;
-    color: $primary-color;
+    color: $primary-color !important;
   }
 }
 

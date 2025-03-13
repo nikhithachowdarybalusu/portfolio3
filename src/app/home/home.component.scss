@@ -187,8 +187,8 @@ h1 {
   }
 
   .profile-img {
-    width: 100px; /* Smaller image for mobile */
-    height: 100px;
+    width: 250px; /* Smaller image for mobile */
+    height: 250px;
   }
 
   h1 {
@@ -208,7 +208,7 @@ h1 {
   }
 
   .social-icons a {
-    font-size: 18px;
+    font-size: 40px;
     margin: 0 8px;
   }
 
@@ -234,8 +234,8 @@ h1 {
   }
 
   .profile-img {
-    width: 90px; /* Further reduce image size */
-    height: 90px;
+    width: 180px; /* Further reduce image size */
+    height: 180px;
   }
 
   h1 {
@@ -267,6 +267,12 @@ h1 {
   .view-resume-btn {
     font-size: 16px;
     margin-top: 6px;
+  }
+
+  .view-resume-btn:hover {
+    background-color: $primary-color; /* Change color on hover */
+    color: $white;
+    transform: scale(1.4); /* Slight increase in size on hover */
   }
 
   .btn {
