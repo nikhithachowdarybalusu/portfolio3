@@ -7,11 +7,12 @@
   <mat-accordion>
     <mat-expansion-panel class="accordion-item" *ngFor="let education of educationList">
       <mat-expansion-panel-header class="accordion-header">
-        {{ education.title }} - {{ education.institution }}
+        {{ education.title }}
       </mat-expansion-panel-header>
       <mat-panel-description class="accordion-body">
-        <p>{{ education.description }}</p>
-        <p><strong>Duration:</strong> {{ education.duration }}</p>
+        <p class="institution-title"><strong> {{ education.institution }} </strong></p>
+        <p><strong> {{ education.duration }} </strong></p>
+        <p class="description">{{ education.description }}</p>
       </mat-panel-description>
     </mat-expansion-panel>
   </mat-accordion>

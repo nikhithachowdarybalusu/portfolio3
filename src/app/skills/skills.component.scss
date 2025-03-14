@@ -34,10 +34,6 @@
     // color: $primary-color;
   }
   
-  .skills-icon:hover {
-    color: darken($primary-color, 10%);
-  }
-  
   .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +51,7 @@
   }
   
   .skill-category h3 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: $primary-color;
     margin-bottom: 15px;
   }
@@ -71,7 +67,7 @@
   }
   
   .skill-category ul li {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $dark-color;
     margin-bottom: 8px;
   }

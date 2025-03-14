@@ -42,6 +42,13 @@
   border-bottom: 1px solid #ddd;
   margin-left: 18%;
   max-width: 60%;
+  margin-top: 5%;
+}
+
+.accordion-header{
+  font-size: 1.3rem;
+  font-weight: normal;
+  padding: 12px;
 }
 
 /* Override mat-expansion-panel styles */
@@ -75,15 +82,23 @@
 }
 
 ::ng-deep .mat-expansion-panel-body {
-  padding: 15px;
   // background-color: $white; /* Background color for the expanded content */
   border-top: 1px solid $primary-color;
   color: $primary-color !important;
+  display: block;
+  .description{
+    min-width: 20%;
+  }
 }
 
 ::ng-deep .mat-expansion-panel-body p {
-  margin: 0;
+  margin: 4%;
   color: $primary-color !important;
+  display: block;
+  .institution-title{
+    font-size: 1.2rem;
+  }
+  min-width: 15%;
 }
 
 ::ng-deep .mat-expansion-panel-header.mat-expansion-panel-header-focused {
@@ -105,11 +120,11 @@
   }
 
   .accordion {
-    padding: 10px;
+    padding: 2%;
   }
 
   .accordion-header {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 12px;
   }
 
@@ -117,6 +132,11 @@
     font-size: 1rem;
     padding: 12px;
     color: $primary-color !important;
+    display: block;
+    
+  .institution-title{
+    font-size: 1.2rem;
+  }
   }
 }
 

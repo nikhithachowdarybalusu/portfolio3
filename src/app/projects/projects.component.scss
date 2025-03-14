@@ -22,7 +22,7 @@
 .projects-icon {
   font-size: 2rem;  /* Adjust the size of the icon */
   margin-right: 10px;  /* Space between the icon and title */
-  margin-top: 2%;
+  margin-bottom: 1%;
   margin-left: 4%;
 }
 
@@ -181,6 +181,10 @@
     margin-top: 20px; /* Adds space below the title */
   }
 
+  .projects-icon{
+    margin-top: 4%;
+  }
+
   .tabs {
     flex-direction: column; /* Stacks the tabs vertically */
     gap: 15px;
@@ -198,7 +202,7 @@
     width: 100%;
   }
 
-  .tab-content h3 {
+  .tab-content h1 {
     font-size: 1.3rem;
   }
 
@@ -219,12 +223,12 @@
 
   .tabs {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .tab {
-    min-width: 45%; /* Two tabs per row */
-    max-width: 45%;
+    min-width: 50%; /* Two tabs per row */
+    max-width: 50%;
   }
 
   .section-title {
@@ -234,5 +238,11 @@
   .title-line {
     width: 100%; /* Full width line */
     margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .projects-icon{
+    margin-top: 6%; 
   }
 }

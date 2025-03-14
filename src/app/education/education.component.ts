@@ -26,7 +26,7 @@ export class EducationComponent implements OnInit {
     {
       title: 'Master of Science in Computer Science',
       institution: 'ABC Institute of Technology',
-      description: 'Advanced topics in machine learning, AI, and data analysis.',
+      description: 'Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.',
       duration: '2017-2021',
       delay: '0.5s'
     }

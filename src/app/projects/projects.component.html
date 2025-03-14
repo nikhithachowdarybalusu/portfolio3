@@ -13,7 +13,7 @@
           <!-- <img [src]="project.imageUrl" alt="Project Image" class="project-img" /> -->
         </div>
         <div class="tab-content">
-          <h3>{{ project.title }}</h3>
+          <h1>{{ project.title }}</h1>
           <p>{{ project.description | slice:0:100 }}...</p>
           <a [routerLink]="['/project', project.id]" class="project-link">Read more</a>
         </div>
