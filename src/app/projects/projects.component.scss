@@ -61,7 +61,7 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: left;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(30px);
@@ -72,14 +72,17 @@
 .tab:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px #00000026;
-  background-color: #174f88;
-  color: #fff;
+  background-color: $primary-color;
+  color: $white;
+  h1{
+    color: $white;
+  }
   .project-link{
-    color: #fff;
+    color: $white;
   }
   .view-btn{
-    background-color: #fff;
-    color: #174f88;
+    background-color: $white;
+    color: $primary-color;
   }
 }
 
@@ -90,6 +93,9 @@
 
 .tab-content {
   flex-grow: 1;
+  h1{
+    color: $primary-color;
+  }
 }
 
 /* Animation for tabs */
@@ -140,9 +146,9 @@
 
 /* Link inside the tab (project link) */
 .project-link {
-  text-align: right;
+  text-align: left;
   font-size: 14px;
-  color: #174f88;
+  color: $primary-color;
   text-decoration: none;
   font-weight: bold;
 }
@@ -155,8 +161,8 @@
 .view-btn {
   align-self: flex-end;
   padding: 12px 20px;
-  background-color: #174f88;
-  color: white;
+  background-color: $primary-color;
+  color: $white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -164,7 +170,7 @@
 }
 
 .view-btn:hover {
-  background-color: #174f88;
+  background-color: $primary-color;
 }
 
 /* Mobile responsiveness */

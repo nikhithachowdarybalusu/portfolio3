@@ -13,10 +13,10 @@
           <!-- <img [src]="project.imageUrl" alt="Project Image" class="project-img" /> -->
         </div>
         <div class="tab-content">
-          <h1>{{ project.title }}</h1>
+          <h1><strong> {{ project.title }} </strong></h1>
           <p>{{ project.description | slice:0:100 }}...</p>
-          <a [routerLink]="['/project', project.id]" class="project-link">Read more</a>
         </div>
+        <a [routerLink]="['/project', project.id]" class="project-link">Read more</a>
         <button class="view-btn" (click)="viewProject(project)">View Project</button>
       </div>
     </div>
