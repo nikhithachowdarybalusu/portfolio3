@@ -115,11 +115,16 @@
 /* Mobile Responsive Styles */
 @media (max-width: 767px) {
 
+  .work-experience-header{
+    margin-top: 2%;
+    margin-bottom: 4%;
+  }
+
   .section-title {
     font-size: 2rem;
     // margin-left: 4%;
     margin-right: 2%; /* Space between title and line */
-    margin-bottom: 10px; /* Adds some space below the title */
+    // margin-bottom: 10px; /* Adds some space below the title */
     flex-wrap: nowrap;
   }
 
@@ -161,6 +166,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .work-experience-header {
     justify-content: flex-start; /* Aligns the title and line to the left */
+    margin-top: 2%;
   }
 
   .experience-cards {

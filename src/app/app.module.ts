@@ -16,6 +16,7 @@ import { MatExpansionModule } from '@angular/material/expansion'
 import { ProjectsComponent } from './projects/projects.component';
 import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SkillsComponent } from './skills/skills.component';
     WorkExperienceComponent,
     ProjectDescriptionComponent,
     EducationComponent,
-    SkillsComponent
+    SkillsComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

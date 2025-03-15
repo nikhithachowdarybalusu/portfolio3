@@ -9,7 +9,7 @@
 .projects-header {
   display: flex;
   align-items: center;
-  margin-bottom: 40px; /* Space below the title */
+  margin-bottom: 80px; /* Space below the title */
   justify-content: center; /* Centers the title and line on small screens */
 }
 
@@ -248,6 +248,10 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .projects-header{
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }
   .projects-icon{
     margin-top: 6%; 
   }
