@@ -33,7 +33,7 @@ export class WorkExperienceComponent implements OnInit {
       position: 'Graduate Teaching Assistant – Data Structures',
       company: 'Wichita State University',
       duration: 'Jan 2024 – May 2025',
-      description: 'Led lab sessions and provided personalized support, guiding students through exercises, assignments, and complex topics to reinforce course concepts. Graded assignments, delivered constructive feedback, and conducted quiz reviews to enhance student understanding. Collaborated with professors on curriculum planning and instructional materials.',
+      description: 'Led lab sessions and provided personalized support, guiding students through exercises, assignments, and complex topics to reinforce course concepts. Graded assignments, delivered constructive feedback and Collaborated with professors on curriculum planning and instructional materials.',
       link: 'https://wichita.edu',
       delay: '0.2s'
     },
@@ -44,9 +44,25 @@ export class WorkExperienceComponent implements OnInit {
       description: 'Advocated for funding by presenting budget proposals to the Student Government Association (SGA) and managed official communications between students and administration. Oversaw association activities, ensuring smooth execution of events, programs, and initiatives to foster community engagement.',
       link: 'https://wichita.campuslabs.com/engage/organization/indian-student-association',
       delay: '0.4s'
+    },
+    {
+      position: 'Adjunct Faculty',
+      company: 'ECET',
+      duration: 'Nov 2022 – Jul 2023',
+      description: 'Led undergraduate courses in C, Python, Java, and DBMS, managing course delivery, curriculum planning, and lab instruction. Demonstrated strong technical skills and leadership by guiding students through assignments, exams, and placement preparation.',
+      link: 'https://jntuk.edu.in',
+      delay: '0.6s'
+    },
+    {
+      position: 'Software Development Intern',
+      company: 'L Cube Innovative Solutions',
+      duration: 'Apr 2021 – May 2021',
+      description: 'Gained hands-on experience with Lean & Agile methodologies and software engineering practices during the internship. Contributed to the development process while learning key industry practices in a remote setting.',
+      link: 'http://www.l-cube.com/',
+      delay: '0.8s'
     }
     // Add more work experience as needed
-  ];
+  ];  
   
 
   constructor() { }

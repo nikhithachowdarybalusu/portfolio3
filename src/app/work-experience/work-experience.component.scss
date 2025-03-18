@@ -41,8 +41,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px; /* Added gap for better spacing */
+  gap: 5%; /* Added gap for better spacing */
   margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /* Experience Card Styling */
@@ -50,18 +52,18 @@
   background: white;
   border: 1px solid #ddd;
   border-radius: 12px;
-  width: 300px;
-  padding: 20px;
+  width: 25%;
+  padding: 2%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
   cursor: pointer;
   transform: translateY(50px);
-  margin-bottom: 20px; /* Ensures spacing between rows */
+  margin-bottom: 5%; /* Ensures spacing between rows */
 }
 
 .experience-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  // transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .card-header {
@@ -96,7 +98,7 @@
   color: #777;
   line-height: 1.5;
   text-align: left;
-  min-height: 53%;
+  min-height: 50%;
 }
 
 .view-link {
