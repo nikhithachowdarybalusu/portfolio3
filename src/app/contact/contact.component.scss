@@ -1,0 +1,126 @@
+@import '../../assets/colors.scss';
+
+/* Section Styling */
+.contact-section {
+  text-align: center;
+  padding: 5% 15%;
+  background-color: $light-color; /* Light background to match projects section */
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.7s ease-out;
+}
+
+.section-title {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400; /* Light weight for cursive effect */
+  font-size: 4rem;
+  // font-weight: 600;
+  margin-bottom: 20px;
+  color: $primary-color;
+  animation: fadeInText 0.7s ease-out;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: $primary-color;
+  box-shadow: 0 0 5px rgba($primary-color, 0.3);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button {
+  background-color: $primary-color;
+  color: $white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+/* Success & Error Messages */
+.success-message, .error-message {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
+/* Animation for Section */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .contact-section {
+    padding: 5% 10%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}

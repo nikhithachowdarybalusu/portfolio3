@@ -1,5 +1,5 @@
 <nav class="navbar">
-  <div class="logo">My Portfolio</div>
+  <div class="logo">Chandra Nikitha Balusu</div>
   <button class="menu-btn" (click)="toggleMenu()">☰</button>
   <ul [class.open]="isMenuOpen">
     <li><a (click)="scrollToSection('home')">Home</a></li>
@@ -9,9 +9,12 @@
     <li><a (click)="scrollToSection('contact')">Contact</a></li>
   </ul>
 </nav>
-<app-home></app-home>
-<app-work-experience></app-work-experience>
-<app-projects></app-projects>
-<app-education></app-education>
-<app-skills></app-skills>
-<app-contact></app-contact>
+
+<!-- <div class="portfolio_body"> -->
+  <app-home></app-home>
+  <app-work-experience></app-work-experience>
+  <app-projects></app-projects>
+  <app-education></app-education>
+  <app-skills></app-skills>
+  <app-contact></app-contact>
+<!-- </div> -->

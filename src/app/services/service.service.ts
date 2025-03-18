@@ -38,4 +38,13 @@ export class ServiceService {
     });
   }
 
+  // sendMessage(data: any): Observable<any> {
+  //   return this.http.post(this.apiUrl+"/contact/send-message", data);
+  // }
+  
+  //send-email
+  sendEmail(data: any): Observable<any> {
+    return this.http.post(this.apiUrl+"/Contact/send-message", data);
+  }
+
 }

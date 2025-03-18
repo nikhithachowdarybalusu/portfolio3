@@ -56,9 +56,9 @@ export class ProjectsComponent {
     // You can add more logic here to navigate to another page or show details in a modal
   }
 
-  // openProjectInNewTab(projectId: number): void {
-  //   const projectUrl = `/project/${projectId}`;
-  //   console.log("opening ", projectUrl);
-  //   window.open(projectUrl, '_blank'); // Opens the URL in a new tab
-  // }
+  openProjectInNewTab(projectId: number): void {
+    const projectUrl = `/project/${projectId}`;
+    console.log("opening ", projectUrl);
+    window.open(projectUrl, '_blank'); // Opens the URL in a new tab
+  }
 }
