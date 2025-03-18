@@ -64,17 +64,25 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.card-header h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #174f88;
-  margin-bottom: 10px;
-}
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This ensures the position and company name are spaced evenly */
+  min-height: 27%;
+  .position{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $primary-color;
+    // margin-bottom: 10px;
+  }
 
-.company-name {
-  font-size: 1rem;
-  color: #666;
-  font-weight: 500;
+  .company-name {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 400;
+    padding-top: 5%;
+    margin-bottom: 5%;
+  } 
 }
 
 .card-duration {
@@ -87,6 +95,8 @@
   font-size: 1rem;
   color: #777;
   line-height: 1.5;
+  text-align: left;
+  min-height: 53%;
 }
 
 .view-link {
@@ -94,14 +104,14 @@
   margin-top: 15px;
   font-size: 1rem;
   font-weight: 600;
-  color: #174f88;
+  color: $primary-color;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
 }
 
 .view-link:hover {
-  color: #174f88;
+  color: $primary-color;
 }
 
 .view-link::after {
@@ -178,6 +188,10 @@
 
   .experience-card {
     width: 45%; /* Two cards per row */
+  }
+
+  .card-description {
+    min-height: unset;
   }
 
   .section-title {

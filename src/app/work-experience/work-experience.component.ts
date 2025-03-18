@@ -22,31 +22,32 @@ export class WorkExperienceComponent implements OnInit {
 
   workExperience = [
     {
-      position: 'Software Developer',
+      position: 'Frontend Developer – Angular',
       company: 'Wipro Technologies',
-      duration: 'March 2020 - Present',
-      description: 'Developed front-end applications using Angular, integrated APIs, and performed unit testing.',
+      duration: 'Aug 2021 – Aug 2023',
+      description: 'Developed responsive SPAs, improving user interaction for over 16 million monthly visitors by 50% through seamless API integration and enhanced front-end performance. Conducted unit testing with Jasmine and Karma, writing 100+ test cases to ensure 95% test coverage and robust application functionality.',
       link: 'https://wipro.com',
       delay: '0s'
     },
     {
-      position: 'Angular Developer',
-      company: 'XYZ Solutions',
-      duration: 'June 2018 - February 2020',
-      description: 'Led front-end development projects, ensuring a responsive design and smooth user experiences.',
-      link: 'https://xyzsolutions.com',
+      position: 'Graduate Teaching Assistant – Data Structures',
+      company: 'Wichita State University',
+      duration: 'Jan 2024 – May 2025',
+      description: 'Led lab sessions and provided personalized support, guiding students through exercises, assignments, and complex topics to reinforce course concepts. Graded assignments, delivered constructive feedback, and conducted quiz reviews to enhance student understanding. Collaborated with professors on curriculum planning and instructional materials.',
+      link: 'https://wichita.edu',
       delay: '0.2s'
     },
     {
-      position: 'Intern, Full Stack Developer',
-      company: 'ABC Technologies',
-      duration: 'July 2017 - May 2018',
-      description: 'Contributed to both front-end and back-end tasks, learning key aspects of web development.',
-      link: 'https://abctechnologies.com',
+      position: 'General Secretary – India Student Association',
+      company: 'Wichita State University',
+      duration: 'Jan 2024 – Feb 2025',
+      description: 'Advocated for funding by presenting budget proposals to the Student Government Association (SGA) and managed official communications between students and administration. Oversaw association activities, ensuring smooth execution of events, programs, and initiatives to foster community engagement.',
+      link: 'https://wichita.campuslabs.com/engage/organization/indian-student-association',
       delay: '0.4s'
     }
     // Add more work experience as needed
   ];
+  
 
   constructor() { }
 

@@ -17,17 +17,17 @@ import { trigger, transition, style, animate, query } from '@angular/animations'
 export class EducationComponent implements OnInit {
   educationList = [
     {
-      title: 'Bachelor of Science in Computer Science',
-      institution: 'XYZ University',
-      description: 'Focus on algorithms, data structures, and programming languages.',
+      title: 'Bachelor of Technology - Computer Science Engineering',
+      institution: 'Jawahrlal Nehru Technological University',
+      description: 'Developed a strong foundation in computer science, covering subjects such as C, C++, DBMS, Data Structures, Data Warehousing, and Software Engineering.I graduated with a CGPA of 8.5/10, equivalent to 3.4/4.0. In addition to core technical skills, I explored areas like Data Mining, Software Testing, and Unified Modeling',
       duration: '2017-2021',
       delay: '0.2s'
     },
     {
-      title: 'Master of Science in Computer Science',
-      institution: 'ABC Institute of Technology',
-      description: 'Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.Advanced topics in machine learning, AI, and data analysis.',
-      duration: '2017-2021',
+      title: 'Master of Science - Computer Science',
+      institution: 'Wichita State University',
+      description: 'The coursework has covered a broad spectrum of topics, including Data Science, Algorithms, Cross-Platform Mobile App Development, and Database Management Systems. In addition to these, I have gained proficiency in technologies such as Git, Power BI, and Data Cleaning.',
+      duration: '2023-2025',
       delay: '0.5s'
     }
   ];

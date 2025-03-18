@@ -61,8 +61,18 @@ html, body {
     text-decoration: none;
     font-size: 18px;
   }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .logo{
+      font-size: 2.5rem;
+    }
+  }
   
   @media (max-width: 768px) {
+
+    .logo{
+      font-size: 2.2rem;
+    }
 
     .menu-btn {
       display: flex;
