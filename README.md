@@ -78,28 +78,32 @@ Portfolio/
 cd portfolio-frontend
 npm install
 ng serve
+```
 
 ### Backend
 
-cd PortfolioAPI
+```cd PortfolioAPI
 dotnet restore
 dotnet run
+```
 
 ### ✉️ Email Configuration
 
-"EmailSettings": {
+```"EmailSettings": {
   "SmtpServer": "smtp.gmail.com",
   "Port": 587,
   "SenderEmail": "your-email@gmail.com",
   "SenderPassword": "your-app-password",
   "ReceiverEmail": "your-email@gmail.com"
 }
+```
 
 ⚠️ Use an App Password if you’re using Gmail.
 
 ### 📄 Resume Download
 
-Use /api/resume/download for downloading
+```Use /api/resume/download for downloading
+```
 
 ### 🛡️ Security
 
@@ -115,7 +119,7 @@ If you'd like to get in touch, just use the contact form on the site or connect 
 
 ### ⭐ Credits
 
-Designed & Developed by [Your Name]
+Designed & Developed by Chandra Nikitha Balusu
 
 Powered by Angular, .NET, Azure
 
