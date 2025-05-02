@@ -45,21 +45,7 @@ A full-stack, responsive portfolio website built using **Angular** for the front
 
 ## 📂 Project Structure
 
-Portfolio/
-│
-├── portfolio-frontend/ # Angular Frontend
-│ ├── src/app/
-│ │ ├── components/
-│ │ ├── services/
-│ │ └── models/
-│ └── styles.css
-│
-├── PortfolioAPI/ # .NET API Backend
-│ ├── Controllers/
-│ ├── Models/
-│ ├── Services/
-│ ├── appsettings.json
-│ └── Program.cs
+![image](https://github.com/user-attachments/assets/e4e5effa-d75c-4d49-9423-3989f006404f)
 
 
 ---
@@ -102,7 +88,8 @@ dotnet run
 
 ### 📄 Resume Download
 
-```Use /api/resume/download for downloading
+```
+Use /api/resume/download for downloading
 ```
 
 ### 🛡️ Security
