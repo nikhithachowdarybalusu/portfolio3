@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
+import { ServiceService } from '../services/service.service';
 
 @Component({
   selector: 'app-projects',
@@ -48,7 +49,13 @@ export class ProjectsComponent {
     // Additional projects...
 ];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private service: ServiceService, private route: ActivatedRoute) {}
+
+  ngOnInit(){
+    this.service.getProjects().subscribe(data=>{
+      this.projects = data;
+    })
+  }
 
   viewProject(project: any) {
     console.log('View details for:', project.title);

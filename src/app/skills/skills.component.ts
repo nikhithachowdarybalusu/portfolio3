@@ -20,12 +20,12 @@ export class SkillsComponent {
     {
       category: 'Databases & Tools',
       icon: 'fas fa-database',
-      skills: ['MySQL', 'SQLite', 'Swagger', 'Postman', 'Git', 'GitHub']
+      skills: ['MySQL', 'SQLite', 'Swagger', 'Postman', 'Git', 'GitHub', 'Azure Web API']
     },
     {
       category: 'Others',
       icon: 'fas fa-plug',
-      skills: ['RESTful API Integration', 'API Development', 'Power BI Dashboard']
+      skills: ['RESTful API Integration', 'API Development', 'Power BI Dashboard', 'Object-Oriented Programming']
     },
     {
       category: 'Communication & Soft Skills',

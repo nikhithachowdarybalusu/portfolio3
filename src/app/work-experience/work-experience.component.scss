@@ -11,7 +11,11 @@
   align-items: center;
   margin-bottom: 40px; /* Space below the title */
   justify-content: center; /* Centers the title and line on small screens */
-  color: $primary-color;
+  // background: $fancy-gradient;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // background-clip: text;
+  color: $section-title;
 }
 
 .section-title {
@@ -32,7 +36,7 @@
 .title-line {
   flex-grow: 1; /* This will make the line extend across */
   height: 2px; /* Line thickness */
-  background-color: $primary-color; /* Line color */
+  background-color: $title-line; /* Line color */
   margin-right: 2%;
 }
 

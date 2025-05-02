@@ -24,6 +24,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  #name{
+    color: $primary-color;
+    font-size: 4rem;
+  }
+  .wave-icon{
+    width: 40px;
+    height: 40px;
+    animation: wave-animation 0.5s ease-in-out infinite;
+    transform: rotate(45deg);
+  }
 }
 
 .hero-image {
@@ -103,7 +113,7 @@
 h1 {
   font-size: 3rem;
   margin-bottom: 5%;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .title {
@@ -137,6 +147,26 @@ h1 {
   cursor: pointer;
   color: white;
 }
+
+/* Waving animation for the icon */
+@keyframes wave-animation {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
 
 /* Responsive Design */
 @media only screen and (max-width: 1024px) {

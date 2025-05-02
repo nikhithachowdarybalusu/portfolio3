@@ -2,7 +2,7 @@
 
 .skills-section {
     padding: 5%;
-    background-color: $light-color;
+    // background-color: $light-color;
     text-align: center;
   }
 
@@ -21,13 +21,13 @@
     // color: $primary-color;
     margin-bottom: 2%;
     margin-right: 2%;
-    color: $primary-color;
+    color: $section-title;
   }
 
   .title-line {
     flex-grow: 1; /* This will make the line extend across */
     height: 2px; /* Line thickness */
-    background-color: $primary-color; /* Line color */
+    background-color: $title-line; /* Line color */
     margin-bottom: 1%;
   }
   

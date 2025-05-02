@@ -4,7 +4,7 @@
 .contact-section {
   text-align: center;
   padding: 5% 15%;
-  background-color: $light-color; /* Light background to match projects section */
+  // background-color: $light-color; /* Light background to match projects section */
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.7s ease-out;
@@ -16,7 +16,7 @@
   font-size: 4rem;
   // font-weight: 600;
   margin-bottom: 20px;
-  color: $primary-color;
+  color: $section-title;
   animation: fadeInText 0.7s ease-out;
 }
 

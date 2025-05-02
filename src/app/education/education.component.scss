@@ -2,7 +2,7 @@
 
 .education-section {
   padding: 4%;
-  background-color: $light-color;
+  // background-color: $light-color;
   justify-content: center;
 }
 
@@ -11,7 +11,7 @@
   font-weight: 400; /* Light weight for cursive effect */
   font-size: 3.5rem;
   // font-weight: 600;
-  color: $primary-color;
+  color: $section-title;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
 .title-line {
   flex-grow: 1; /* This will make the line extend across */
   height: 2px; /* Line thickness */
-  background-color: $primary-color; /* Line color */
+  background-color: $title-line; /* Line color */
   margin-left: 2%;
 }
 

@@ -47,4 +47,8 @@ export class ServiceService {
     return this.http.post(this.apiUrl+"/Contact/send-message", data);
   }
 
+  getProjects(): Observable<any>{
+    return this.http.get<any>(this.apiUrl+"/projects");
+  }
+
 }
