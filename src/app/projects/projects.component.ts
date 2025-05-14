@@ -11,7 +11,7 @@ export class ProjectsComponent implements AfterViewInit {
   projects = [
   {
     "id": 1,
-    "title": "Portfolio Application",
+    "title": "My Portfolio",
     "period": "Jan 2025 – Mar 2025",
     "description": [
       "Developed a Full-stack portfolio application using .NET (backend) and Angular (frontend), with emphasis on RESTful API integration to manage user data and content.",
@@ -20,8 +20,8 @@ export class ProjectsComponent implements AfterViewInit {
       "Currently finalizing styling and preparing for deployment, aiming to boost profile visibility and user engagement by 50%."
     ],
     "image": "assets/portfolio-image.png",
-    "link": "https://yourportfolioapp.com",
-    "github": "https://github.com/yourgithub/portfolio-app"
+    "link": "https://nikhithachowdarybalusu.github.io/portfolio3/",
+    "github": "https://github.com/nikhithachowdarybalusu/portfolio3"
   },
   {
     "id": 2,
@@ -34,25 +34,27 @@ export class ProjectsComponent implements AfterViewInit {
       "Implemented a user-friendly HTML/CSS front-end with optimized navigation for ease of use."
     ],
     "image": "assets/library-management-system-image.png",
-    "link": "https://librarymanagementsystem.com",
-    "github": "https://github.com/yourgithub/library-management-system"
+    "link": "https://github.com/nikhithachowdarybalusu/Library_Management_System_DB",
+    "github": "https://github.com/nikhithachowdarybalusu/Library_Management_System_DB"
   },
   {
-    "id": 3,
-    "title": "Predictive Modelling & Data Analysis",
-    "period": "Mar 2024 – May 2024",
-    "description": [
-      "Developed a regression model using XGBoost, evaluating accuracy through R-squared, MSE, and RMSE metrics.",
-      "Conducted Exploratory Data Analysis (EDA) with Pandas, Seaborn, and Matplotlib to visualize data patterns and feature significance.",
-      "Executed data preprocessing tasks including handling missing values, removing duplicates, and feature selection for model optimization."
-    ],
-    "image": "assets/predictive-modelling-image.jpg",
-    "link": "https://predictivemodelling.com",
-    "github": "https://github.com/yourgithub/predictive-modelling"
+  "id": 3,
+  "title": "Household Food Expenditure Analysis & Prediction",
+  "period": "Mar 2024 – May 2024",
+  "description": [
+    "Performed end-to-end data preprocessing on consumer expenditure data, including missing value treatment, outlier detection, and multicollinearity reduction.",
+    "Engineered insightful features like food away/home ratio and expenditure proportions to enhance model accuracy.",
+    "Built and compared predictive models including Linear Regression and Random Forest, achieving high R² on both training and test sets.",
+    "Used visualizations (scatter plots, KDEs, boxplots, pairplots) to explore data relationships and model residuals.",
+    "Applied PCA for dimensionality reduction and VIF analysis for multicollinearity control."
+  ],
+  "image": "assets/food-expenditure-prediction.png",
+  "link": "https://yourportfolio.com/projects/food-expenditure-prediction",
+  "github": "assets/Data Science Project.ipynb"
   },
   {
     "id": 4,
-    "title": "My Recipe Book",
+    "title": "Recipe App using .Net MAUI",
     "period": "Nov 2023 – Jan 2024",
     "description": [
       "Developed a cross-platform recipe app using .NET MAUI and C#, implementing dynamic recipe browsing with horizontal scrolling and tabbed layouts.",
@@ -110,7 +112,7 @@ export class ProjectsComponent implements AfterViewInit {
 
   viewOnGithub(project: any): void {
     console.log('View GitHub repo for:', project.title);
-    window.open(project.link, '_blank');
+    window.open(project.github, '_blank');
   }
 
   openProjectInNewTab(projectId: number): void {
