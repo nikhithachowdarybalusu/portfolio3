@@ -19,7 +19,7 @@ export class ProjectsComponent implements AfterViewInit {
       "Integrated SQL for database storage and applied best practices for API development using Swagger for clear documentation and streamlined API usage.",
       "Currently finalizing styling and preparing for deployment, aiming to boost profile visibility and user engagement by 50%."
     ],
-    "image": "../../assets/portfolio-image.png",
+    "image": "assets/portfolio-image.png",
     "link": "https://yourportfolioapp.com",
     "github": "https://github.com/yourgithub/portfolio-app"
   },
@@ -33,7 +33,7 @@ export class ProjectsComponent implements AfterViewInit {
       "Utilized RESTful APIs to handle user interaction and server-side operations, supporting book issuance, fines, and returns seamlessly.",
       "Implemented a user-friendly HTML/CSS front-end with optimized navigation for ease of use."
     ],
-    "image": "../../assets/library-management-system-image.png",
+    "image": "assets/library-management-system-image.png",
     "link": "https://librarymanagementsystem.com",
     "github": "https://github.com/yourgithub/library-management-system"
   },
@@ -46,7 +46,7 @@ export class ProjectsComponent implements AfterViewInit {
       "Conducted Exploratory Data Analysis (EDA) with Pandas, Seaborn, and Matplotlib to visualize data patterns and feature significance.",
       "Executed data preprocessing tasks including handling missing values, removing duplicates, and feature selection for model optimization."
     ],
-    "image": "../../assets/predictive-modelling-image.jpg",
+    "image": "assets/predictive-modelling-image.jpg",
     "link": "https://predictivemodelling.com",
     "github": "https://github.com/yourgithub/predictive-modelling"
   },
@@ -59,7 +59,7 @@ export class ProjectsComponent implements AfterViewInit {
       "Integrated APIs for real-time data fetching and handled navigation for seamless user experience.",
       "Incorporated YouTube video links within recipes to enhance user engagement and content interactivity."
     ],
-    "image": "../../assets/recipe-book-image.png",
+    "image": "assets/recipe-book-image.png",
     "link": "https://myrecipebookapp.com",
     "github": "https://github.com/yourgithub/my-recipe-book"  
   }
