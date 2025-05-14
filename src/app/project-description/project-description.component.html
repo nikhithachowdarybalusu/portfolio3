@@ -1,11 +1,22 @@
-<div class="project-detail" *ngIf="project.id">
-    <img [src]="project.image" alt="{{project.title}}" class="project-image">
-    <h2>{{ project.title }}</h2>
-    <p><strong>Period:</strong> {{ project.period }}</p>
+<main class="project-page" *ngIf="project?.id">
+  <header class="project-header">
+    <h1 class="project-title">{{ project.title }}</h1>
+    <p class="project-period">{{ project.period }}</p>
+  </header>
+
+  <section class="project-image-section">
+    <img [src]="project.image" [alt]="project.title" class="project-image" />
+  </section>
+
+  <section class="project-body">
+    <h2>About the Project</h2>
     <div class="project-description">
-      <p *ngFor="let description of project.description">{{ description }}</p>
+      <p *ngFor="let line of project.description">{{ line }}</p>
     </div>
-    <a [href]="project.link" target="_blank" class="project-link">View Live Project</a>
-    <a [href]="project.github" target="_blank" class="project-link">GitHub Repository</a>
-  </div>
-  
+  </section>
+
+  <section class="project-links">
+    <a [href]="project.link" target="_blank" class="project-link live-link">🔗 View Live Project</a>
+    <a [href]="project.github" target="_blank" class="project-link github-link">💻 GitHub Repository</a>
+  </section>
+</main>

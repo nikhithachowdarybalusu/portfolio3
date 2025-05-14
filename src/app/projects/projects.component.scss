@@ -2,74 +2,78 @@
 
 /* Basic Section Styling */
 .projects-section {
-  // padding-bottom: 4%;
   text-align: center;
 }
 
 .projects-header {
   display: flex;
   align-items: center;
-  margin-bottom: 80px; /* Space below the title */
-  justify-content: center; /* Centers the title and line on small screens */
+  margin-bottom: 80px;
+  justify-content: center;
   color: $section-title;
 }
 
 .section-title {
   font-family: 'Dancing Script', cursive;
-  font-weight: 400; /* Light weight for cursive effect */
+  font-weight: 400;
   font-size: 3.5rem;
-  // font-weight: 600;
-  margin-right: 2%; /* Space between title and line */
+  margin-right: 2%;
 }
 
 .projects-icon {
-  font-size: 2rem;  /* Adjust the size of the icon */
-  margin-right: 10px;  /* Space between the icon and title */
+  font-size: 2rem;
+  margin-right: 10px;
   margin-bottom: 1%;
   margin-left: 4%;
 }
 
 .title-line {
-  flex-grow: 1; /* This will make the line extend across */
-  height: 2px; /* Line thickness */
-  background-color: $title-line; /* Line color */
+  flex-grow: 1;
+  height: 2px;
+  background-color: $title-line;
 }
 
-/* Container for the tabs */
 .tabs-container {
   width: 100%;
   overflow-x: auto;
   padding: 20px 0;
-  // background-color: #f8f9fa;
-  animation: fadeIn 0.5s ease-out;
   align-items: center;
 }
 
-/* Flex container for the tabs */
 .tabs {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 10px;
+  flex-direction: column;
+  gap: 60px;
+  padding: 10px 20px;
 }
 
 /* Individual tab styling */
 .tab {
-  min-width: 250px;
-  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 10px;
   background-color: #a55c9a;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-in-out;
   cursor: pointer;
+  // max-width: 90%;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.reverse-layout {
+    flex-direction: row-reverse;
+  }
 }
 
 .tab:hover {
@@ -77,78 +81,52 @@
   box-shadow: 0 8px 25px #00000026;
   background-color: $primary-color;
   color: $white;
-  h1{
+
+  h1 {
     color: $white;
   }
-  .project-link{
+
+  .project-link {
     color: $white;
   }
-  .view-btn{
+
+  .view-btn {
     background-color: $white;
     color: $primary-color;
-    font-weight: bold;
+    font-weight: bold !important;
   }
 }
 
 .tab-header {
-  position: relative;
-  overflow: hidden;
+  flex: 1;
+  max-width: 250px;
+
+  .project-img {
+    width: 250px;
+    height: 220px;  
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .tab-content {
-  flex-grow: 1;
-  h1{
+  flex: 2;
+  padding: 0 30px;
+
+  h1 {
+    // background: linear-gradient(90deg, pink, blue, purple, violet);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
     color: $primary-color;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
 
-/* Animation for tabs */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animating each tab to appear in a staggered manner */
-@keyframes fadeInStagger {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Add delay for each tab to animate staggered */
-.tab:nth-child(1) {
-  animation: fadeInStagger 0.6s ease-out forwards;
-  animation-delay: 0.1s;
-}
-.tab:nth-child(2) {
-  animation: fadeInStagger 0.6s ease-out forwards;
-  animation-delay: 0.2s;
-}
-.tab:nth-child(3) {
-  animation: fadeInStagger 0.6s ease-out forwards;
-  animation-delay: 0.3s;
-}
-.tab:nth-child(4) {
-  animation: fadeInStagger 0.6s ease-out forwards;
-  animation-delay: 0.3s;
-}
-.tab:nth-child(5) {
-  animation: fadeInStagger 0.6s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-/* Link inside the tab (project link) */
 .project-link {
   text-align: left;
   font-size: 14px;
@@ -161,9 +139,8 @@
   text-decoration: underline;
 }
 
-/* Button to view project details */
 .view-btn {
-  align-self: flex-end;
+  align-self: flex-start;
   padding: 12px 20px;
   background-color: $primary-color;
   color: $white;
@@ -171,6 +148,8 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  vertical-align: middle;
+  margin: 6% auto 0 auto; /* top, right, bottom, left */
 }
 
 .view-btn:hover {
@@ -179,7 +158,6 @@
 
 /* Mobile responsiveness */
 @media (max-width: 767px) {
-
   .section-title {
     font-size: 2rem;
     margin-top: 30px;
@@ -188,28 +166,28 @@
 
   .title-line {
     width: 100%;
-    margin-top: 20px; /* Adds space below the title */
+    margin-top: 20px;
   }
 
-  .projects-icon{
+  .projects-icon {
     margin-top: 4%;
   }
 
-  .tabs {
-    flex-direction: column; /* Stacks the tabs vertically */
-    gap: 15px;
+  .tab,
+  .tab.reverse-layout {
+    flex-direction: column;
+    text-align: center;
+
+    .tab-content {
+      padding: 20px 0;
+    }
   }
 
   .tab {
-    width: 90%; /* Makes the tab width larger on mobile */
+    width: 90%;
     max-width: 400px;
-    margin: 0 auto; /* Centers the tabs */
+    margin: 0 auto;
     padding: 15px;
-  }
-
-  .tab-header {
-    /* If you have project images, adjust them for mobile */
-    width: 100%;
   }
 
   .tab-content h1 {
@@ -222,13 +200,14 @@
 
   .view-btn {
     font-size: 0.9rem;
+    margin: 6% auto 0 auto; /* top, right, bottom, left */
   }
 }
 
 /* Tablet to small laptop responsiveness (up to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .projects-header {
-    justify-content: flex-start; /* Aligns the title and line to the left */
+    justify-content: flex-start;
   }
 
   .tabs {
@@ -237,8 +216,8 @@
   }
 
   .tab {
-    min-width: 50%; /* Two tabs per row */
-    max-width: 50%;
+    // min-width: 100%;
+    max-width: 100%;
   }
 
   .section-title {
@@ -246,17 +225,22 @@
   }
 
   .title-line {
-    width: 100%; /* Full width line */
+    width: 100%;
     margin-top: 10px;
+  }
+
+  .view-btn{
+    margin: 12% auto 0 auto; /* top, right, bottom, left */
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .projects-header{
+  .projects-header {
     margin-top: 6%;
     margin-bottom: 6%;
   }
-  .projects-icon{
-    margin-top: 6%; 
+
+  .projects-icon {
+    margin-top: 6%;
   }
 }

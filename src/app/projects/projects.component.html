@@ -2,22 +2,26 @@
   <div class="projects-header">
     <i class="fas fa-project-diagram projects-icon"></i>
     <h2 class="section-title">Projects</h2>
-    <div class="title-line"></div> <!-- Line next to the title -->
+    <div class="title-line"></div>
   </div>
 
   <div class="tabs-container">
     <div class="tabs">
-      <div class="tab" *ngFor="let project of projects">
+      <div
+        class="tab"
+        #projectTab
+        *ngFor="let project of projects; let i = index"
+        [ngClass]="{ 'reverse-layout': i % 2 !== 0 }"
+      >
         <div class="tab-header">
-          <!-- You can add an image or other content here if needed -->
-          <!-- <img [src]="project.imageUrl" alt="Project Image" class="project-img" /> -->
+          <img [src]="project.image" alt="Project Image" class="project-img" />
         </div>
         <div class="tab-content">
           <h1><strong> {{ project.title }} </strong></h1>
-          <p>{{ project.description | slice:0:100 }}...</p>
+          <p>{{ project.description | slice: 0:100 }}...</p>
+          <a class="project-link" (click)="openProjectInNewTab(project.id)">Read more</a>
         </div>
-        <a class="project-link" (click)="openProjectInNewTab(project.id)">Read more</a>
-        <button class="view-btn" (click)="viewProject(project)">View Project</button>
+        <button class="view-btn" (click)="viewProject(project)">GitHub</button>
       </div>
     </div>
   </div>

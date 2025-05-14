@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portfolio3';
   isMenuOpen = false;
+  projectFound = false;
 
+  constructor(private route: ActivatedRoute, private router: Router, private cd: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    const projectId = parseInt(sessionStorage.getItem('selectedProject')!, 10);
+    console.log(projectId);
+    this.projectFound = projectId > 0 ? true : false;
+    if (this.projectFound){
+      this.cd.detectChanges();
+    }
+    console.log(this.projectFound);
+  }
+  
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }

@@ -47,6 +47,6 @@ export class ProjectDescriptionComponent {
   ngOnInit(): void {
     const projectId = this.route.snapshot.paramMap.get('id');
     console.log(this.route, projectId);
-    this.project = this.projects.find(p => p.id+'' === projectId);
+    this.project = this.projects.find(p => p.id+'' == projectId);
   }
 }

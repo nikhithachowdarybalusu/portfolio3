@@ -32,7 +32,9 @@
 							"@angular/material/prebuilt-themes/pink-bluegrey.css",
 							"src/styles.scss"
 						],
-						"scripts": []
+						"scripts": [],
+						"allowedCommonJsDependencies": ["file-saver"]
+
 					},
 					"configurations": {
 						"production": {

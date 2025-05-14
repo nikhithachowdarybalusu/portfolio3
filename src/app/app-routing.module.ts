@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProjectDescriptionComponent } from './project-description/project-description.component';
 
 const routes: Routes = [
-  { path: 'project/:id', component: ProjectDescriptionComponent }, // Dynamic route for project details
+  // Dynamic route for project details
+  { path: 'project/:id', component: ProjectDescriptionComponent }, 
 
 ];
 

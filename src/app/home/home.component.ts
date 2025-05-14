@@ -15,10 +15,10 @@ export class HomeComponent implements OnInit {
   constructor(private service: ServiceService) {}
 
   ngOnInit() {
-    this.service.getProfile().subscribe((data) => {
-      this.profile = data;
-      console.log("Profile:\n",this.profile);
-    });
+    // this.service.getProfile().subscribe((data) => {
+      // this.profile = data;
+      // console.log("Profile:\n",this.profile);
+    // });
   }
 
   // Method to call the API and download the file

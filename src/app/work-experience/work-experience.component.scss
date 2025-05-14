@@ -53,7 +53,7 @@
 
 /* Experience Card Styling */
 .experience-card {
-  background: white;
+  background: #57326e;
   border: 1px solid #ddd;
   border-radius: 12px;
   width: 25%;
@@ -67,7 +67,10 @@
 
 .experience-card:hover {
   // transform: translateY(-5px);
+  transform: scale(1.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: $primary-color;
+  color: $white;
 }
 
 .card-header {
@@ -78,13 +81,13 @@
   .position{
     font-size: 1.2rem;
     font-weight: 500;
-    color: $primary-color;
+    color: #a7a6a6;
     // margin-bottom: 10px;
   }
 
   .company-name {
     font-size: 1.2rem;
-    color: #666;
+    color: #1b1919;
     font-weight: 400;
     padding-top: 5%;
     margin-bottom: 5%;
@@ -93,13 +96,13 @@
 
 .card-duration {
   font-size: 1.2rem;
-  color: #333;
+  color: #1b1919;
   margin: 10px 0;
 }
 
 .card-description {
   font-size: 1rem;
-  color: #777;
+  color: #a7a6a6;
   line-height: 1.5;
   text-align: left;
   min-height: 50%;
@@ -110,14 +113,15 @@
   margin-top: 15px;
   font-size: 1rem;
   font-weight: 600;
-  color: $primary-color;
+  color: #a7a6a6;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
 }
 
 .view-link:hover {
-  color: $primary-color;
+  color: $white;
+  font-weight: bold;
 }
 
 .view-link::after {
