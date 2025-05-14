@@ -1,8 +1,8 @@
-<router-outlet *ngIf = "projectFound">
+<router-outlet *ngIf = "projectId">
 </router-outlet>
 
 
-<div *ngIf = "!projectFound">
+<div *ngIf = "!projectId">
   <nav class="navbar">
     <div class="logo"></div>
     <button class="menu-btn" (click)="toggleMenu()">☰</button>

@@ -9,18 +9,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
   title = 'portfolio3';
   isMenuOpen = false;
-  projectFound = false;
+  projectId: any;
 
   constructor(private route: ActivatedRoute, private router: Router, private cd: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    const projectId = parseInt(sessionStorage.getItem('selectedProject')!, 10);
-    console.log(projectId);
-    this.projectFound = projectId > 0 ? true : false;
-    if (this.projectFound){
-      this.cd.detectChanges();
-    }
-    console.log(this.projectFound);
+    this.route.queryParamMap.subscribe(params => {
+      this.projectId = params.get('id');
+      console.log('Project ID:', this.projectId);
+    });
   }
   
   toggleMenu() {

@@ -4,7 +4,7 @@ import { ProjectDescriptionComponent } from './project-description/project-descr
 
 const routes: Routes = [
   // Dynamic route for project details
-  { path: 'project/:id', component: ProjectDescriptionComponent }, 
+  { path: 'project', component: ProjectDescriptionComponent }, 
 
 ];
 

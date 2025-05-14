@@ -42,11 +42,16 @@ export class ProjectDescriptionComponent {
         // Additional projects...
   ];
 
+  projectId: any;
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const projectId = this.route.snapshot.paramMap.get('id');
-    console.log(this.route, projectId);
-    this.project = this.projects.find(p => p.id+'' == projectId);
+
+    this.route.queryParamMap.subscribe(params => {
+      this.projectId = params.get('id');
+      console.log('Project ID:', this.projectId);
+    });
+    this.project = this.projects.find(p => p.id+'' == this.projectId);
   }
 }

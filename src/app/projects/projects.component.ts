@@ -115,9 +115,7 @@ export class ProjectsComponent implements AfterViewInit {
 
   openProjectInNewTab(projectId: number): void {
     const projectUrl = `/project/${projectId}`;
+    this.router.navigate(['/project'], { queryParams: { id: projectId } });
     console.log("opening ", projectUrl);
-    // window.open(projectUrl, '_blank');
-    // sessionStorage.setItem('selectedProject', projectId+'');
-    this.router.navigate(['/project', projectId]);
   }
 }
