@@ -1,5 +1,5 @@
 import { Component, ElementRef, Renderer2, AfterViewInit, QueryList, ViewChildren } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ServiceService } from '../services/service.service';
 
 @Component({
@@ -72,6 +72,7 @@ export class ProjectsComponent implements AfterViewInit {
   constructor(
     private service: ServiceService,
     private route: ActivatedRoute,
+    private router: Router,
     private renderer: Renderer2,
   ) {}
 
@@ -107,8 +108,8 @@ export class ProjectsComponent implements AfterViewInit {
     });
   }
 
-  viewProject(project: any): void {
-    console.log('View details for:', project.title);
+  viewOnGithub(project: any): void {
+    console.log('View GitHub repo for:', project.title);
     window.open(project.link, '_blank');
   }
 
@@ -117,5 +118,6 @@ export class ProjectsComponent implements AfterViewInit {
     console.log("opening ", projectUrl);
     // window.open(projectUrl, '_blank');
     // sessionStorage.setItem('selectedProject', projectId+'');
+    this.router.navigate(['/project', projectId]);
   }
 }
