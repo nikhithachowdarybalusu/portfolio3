@@ -6,7 +6,7 @@ A full-stack, responsive portfolio website built using **Angular** for the front
 
 ## 🌐 Live Demo
 
-🔗 [Visit My Portfolio]([https://your-live-link.com](https://nikhithachowdarybalusu.github.io/portfolio3/))
+🔗 [Visit My Portfolio](https://nikhithachowdarybalusu.github.io/portfolio3/)
 
 ---
 
